@@ -1,9 +1,22 @@
-import {Button, StyleSheet, Text, View} from "react-native";
+import { StyleSheet, View } from "react-native";
+import Button, { ButtonTypes, TitleTypes } from "../components/Button";
+import Colors from "../constants/Colors";
 
 export default function AuthorizationScreen({ navigation }) {
     return (
         <View style={styles.container}>
-            <Button title="RegistrationScreen" onPress={() => navigation.navigate("RegistrationScreen")}></Button>
+            <Button
+                title="Войти"
+                buttonType={ButtonTypes.default}
+                titleType={TitleTypes.default}
+                pressHandler={() =>{}}
+            />
+            <Button
+                title="Зарегистрироваться"
+                buttonType={ButtonTypes.secondary}
+                titleType={TitleTypes.secondary}
+                pressHandler={() => navigation.navigate("RegistrationScreen")}
+            />
         </View>
     );
 };
@@ -11,8 +24,8 @@ export default function AuthorizationScreen({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+        backgroundColor: Colors.white,
+        alignItems: "center",
+        justifyContent: "center",
     },
 });

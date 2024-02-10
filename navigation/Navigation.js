@@ -1,5 +1,5 @@
 import { NavigationContainer } from "@react-navigation/native";
-import {createStackNavigator} from "@react-navigation/stack";
+import { createStackNavigator} from "@react-navigation/stack";
 import RegistrationScreen from "../screens/RegistrationScreen";
 import AuthorizationScreen from "../screens/AuthorizationScreen";
 import GreetingScreen from "../screens/GreetingScreen";
@@ -17,7 +17,9 @@ const Stack = createStackNavigator();
 
 function RootNavigator() {
     return (
-        <Stack.Navigator>
+        <Stack.Navigator
+            screenOptions={{ headerShown: false }}
+        >
             <Stack.Group>
                 <Stack.Screen name={"AuthorizationScreen"} component={AuthorizationScreen} />
                 <Stack.Screen name={"RegistrationScreen"} component={RegistrationScreen} />
