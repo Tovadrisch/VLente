@@ -2,6 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator} from "@react-navigation/stack";
 import RegistrationScreen from "../screens/RegistrationScreen";
 import AuthorizationScreen from "../screens/AuthorizationScreen";
+import MeetingScreen from "../screens/MeetingScreen";
 import GreetingScreen from "../screens/GreetingScreen";
 import BottomTabNavigator from "./BottomTabNavigator";
 
@@ -23,6 +24,7 @@ function RootNavigator() {
             <Stack.Group>
                 <Stack.Screen name={"AuthorizationScreen"} component={AuthorizationScreen} />
                 <Stack.Screen name={"RegistrationScreen"} component={RegistrationScreen} />
+                <Stack.Screen name={"MeetingScreen"} component={MeetingScreen} />
                 <Stack.Screen name={"GreetingScreen"} component={GreetingScreen} />
             </Stack.Group>
             <Stack.Screen name={"BottomTabNavigator"} component={BottomTabNavigator} />

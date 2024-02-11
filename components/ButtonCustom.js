@@ -12,7 +12,7 @@ export const TitleTypes = {
     "secondary": "secondaryText"
 };
 
-export default function Button({ buttonType, titleType, title, pressHandler }) {
+export default function ButtonCustom({ buttonType, titleType, title, pressHandler }) {
 
     return (
         <TouchableOpacity activeOpacity={0.6} style={styles[buttonType]} onPress={pressHandler}>
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     defaultButton: {
         width: "100%",
         padding: 12,
-        borderRadius: 999,
+        borderRadius: 25,
         backgroundColor: Colors.default
     },
     secondaryButton: {
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     secondaryText: {
         textAlign: "center",
         fontSize: 18,
-        color: Colors.default
+        color: Colors.default,
+        textDecorationLine: "underline"
     }
 })
